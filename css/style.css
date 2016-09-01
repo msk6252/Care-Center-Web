@@ -18,7 +18,6 @@ br {
 }
 
 body {
-	margin: 0;
 	font-style: normal; 
 	font-family: 'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
 	font-size: 1.4rem;
@@ -54,9 +53,9 @@ section:after {
 
 .menu li a {
 	display: block;
-	padding: 5px;
+	padding: 10px 15px;
 	color: #000000;
-	font-size:1.4rem;
+	font-size:1.6rem;
 	text-decoration: none;
 }
 
@@ -121,10 +120,29 @@ footer:after {
 	clear: both;
 }
 
+footer {
+	background-color: #383838;
+}
+
 footer p {
 	margin: 0;
-	color: #666666;
+	color: #ffffff;
 	font-size: 1.4rem;
+}
+
+header,footer,.news {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+header {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.news {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 /* ===== 768px以上 ===== */
@@ -133,12 +151,12 @@ footer p {
 
 .title {
 	float: left;
-	width: 50%;
+	width: auto;
 }
 
 .box2 {
-	float: left;
-	width: 50%;
+	float: right;
+	width: auto;
 }
 
 }
