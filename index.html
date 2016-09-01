@@ -10,38 +10,57 @@
             $(document).ready(function(){
                 $('.bxslider').bxSlider({
                     auto: true,
+                   	pager: false
                 });
         	});
     </script>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
 	<header>
 		<div class="title">
-			
-			<h1><a href="./index.html">元気が出るデイサービス</a></h1>
+			<div class="site">
+				<h1><a href="#"> 元気が出るデイサービス</a></h1>
+			</div>
 		</div>
-		<nav class="menu">
+		<div class="box2">
+			<nav class="menu">
 			<ul>
-				<li><a href="">概要</a></li>
-				<li><a href="">案内</a></li>
-				<li><a href="">問い合わせ</a></li>
+			<li><a href="">概要</a></li>
+			<li><a href="">沿革</a></li>
+			<li><a href="">お問い合わせ</a></li>
 			</ul>
-		</nav>
+			</nav>	
+		</div>
 	</header>
-	<div class="slide">
+		
+	<section>
 		<ul class="bxslider">
-			<li><img src="http://placehold.jp/1000x400.png"></li>
-			<li><img src="http://placehold.jp/1000x400.png"></li>
-			<li><img src="http://placehold.jp/1000x400.png"></li>
-	        <li><img src="http://placehold.jp/1000x400.png"></li>
-			<li><img src="http://placehold.jp/1000x400.png"></li>
+		<li><img src="http://placehold.it/1000x400"  class="topimg" /></li>
+		<li><img src="http://placehold.it/1000x400" class="topimg" /></li>
+		<li><img src="http://placehold.it/1000x400" class="topimg" /></li>	
 		</ul>
-	</div>
+	</section>
+	
+	<section>
+		<div class="news">
+		<h1>お知らせ</h1>
+		<ul>
+		<li><a href="#">
+			<time datetime="2016-09-31">09/31</time>
+			ホームページを更新しました。
+		</a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>	
+		</ul>	
+		</div>
+	</section>
+	
 	<footer>
-		<p>&copy;元気がでるデイサービスセンター</p>
+		<p>Copyright &copy;元気がでるデイサービスセンター</p>
 	</footer>
 </body>
 </html>

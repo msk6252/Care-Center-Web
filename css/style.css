@@ -10,7 +10,7 @@
 
 /* ========== スマートフォン ========== */
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; /* 10px */
 }
 
 br {
@@ -18,18 +18,10 @@ br {
 }
 
 body {
-	margin: 0　auto;
+	margin: 0;
 	font-style: normal; 
 	font-family: 'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
 	font-size: 1.4rem;
-	width: 100%;
-}
-
-/* ===== header ===== */
-header {
-	margin: 0;
-	padding: 0;
-	background-color:#fffafa; 
 }
 
 header:after {
@@ -38,42 +30,44 @@ header:after {
 	clear: both;
 }
 
-.title {
-	margin: 0 auto;
-	padding: 0;
-	float: left;
-	width: 70%;
+section:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
-.title h1 a {
-	font-size: 3rem;
+.site h1 a {
+	color: #000000;
 	text-decoration: none;
-	color: #000;
 }
 
-
-/* ===== MENU ===== */
-.menu {
-	float: left;
-	width: 30%;
+.site h1 {
+	margin: 0;
+	font-size: 3.0rem;
 }
 
 .menu ul {
-	margin: 0;
+	margin:0;
 	padding: 0;
 	list-style: none;
 }
 
 .menu li a {
-	padding: 15px;
-	color: #000;
-	font-size: 1.4rem;
+	display: block;
+	padding: 5px;
+	color: #000000;
+	font-size:1.4rem;
 	text-decoration: none;
-	overflow: hidden;
 }
 
 .menu li a:hover {
 	background-color: #eee;
+}
+
+.menu ul:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .menu li {
@@ -81,18 +75,70 @@ header:after {
 	width: auto;
 }
 
-.slide {
+.topimg {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
 }
 
-footer {
-	width: 100%;
+/* ===== お知らせ ===== */
+
+.news h1 {
+	margin-top:0;
+	margin-bottom: 5px;
+	font-size: 1.8rem;
+	color: #666666; 
+}
+
+.news ul {
 	margin: 0;
-	padding: 15px 0;
-	background-color: #383838;
+	padding: 0;
+	list-style: none;
 }
 
-footer > p {
-	text-align: center;
-	font-size: 1.6rem;
-	color: #fff;
+.news li a {
+	display: block;
+	padding: 5px;
+	color: #000000;
+	border-bottom: dotted 2px #dddddd;
+	font-size: 1.4rem;
+	text-decoration: none;
+}
+
+.news li a:hover {
+	background-color: #eeeeee;
+}
+
+.news time {
+	margin-right:1.0rem;
+	color: #888888;
+	font-weight: bold; 
+}
+
+footer:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer p {
+	margin: 0;
+	color: #666666;
+	font-size: 1.4rem;
+}
+
+/* ===== 768px以上 ===== */
+
+@media (min-width: 768px) {
+
+.title {
+	float: left;
+	width: 50%;
+}
+
+.box2 {
+	float: left;
+	width: 50%;
+}
+
 }
