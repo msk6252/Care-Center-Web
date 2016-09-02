@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>元気が出るデイサービスセンター</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./js/jquery.bxslider.min.js"></script>
 	<script type="text/javascript">
             $(document).ready(function(){
@@ -13,6 +13,13 @@
                    	pager: false
                 });
         	});
+    </script>
+    <script>
+    	$(function(){
+    		$("#menubtn").click(function){
+    			$("#menu").slideToggle();
+    		});
+    	});
     </script>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" />
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
@@ -24,11 +31,14 @@
 	<header>
 		<div class="title">
 			<div class="site">
-				<h1><a href="#"> 元気が出るデイサービスセンター</a></h1>
+				<h1><a href=""> 元気が出るデイサービスセンター</a></h1>
 			</div>
 		</div>
 		<div class="box2">
-			<nav class="menu">
+			<button type="button" id="menubtn">
+			<i class="fa fa-bars"></i><span>MENU</span>	
+			</button>
+			<nav class="menu" id="menu">
 			<ul>
 			<li><a href="">概要</a></li>
 			<li><a href="">沿革</a></li>
@@ -50,30 +60,31 @@
 		<div class="feature1">
 			<div class="gaiyou">
 			<a href="">
-			<i class="fa fa-database"></i>
-			<h1>データの分析・解析</h1>
-			<p>目的に応じてわかりやすい視覚化し、<br />
-			活用できるようにします。</p>
+			<i class="fa fa-heart-o"></i>
+			<h1>意志を尊重した暮らし</h1>
+			<p>やりたいこと、食べたいものなどの個人の意見を<br />
+			尊重した暮らしを提供しております。
+			</p>
 			</a>
 			</div>
 		</div>
 		<div class="feature2">
 			<div class="gaiyou">
 			<a href="">
-			<i class="fa fa-database"></i>
-			<h1>データの分析・解析</h1>
-			<p>目的に応じてわかりやすい視覚化し、<br />
-			活用できるようにします。</p>
+			<i class="fa fa-child"></i>
+			<h1>アクティブな暮らし</h1>
+			<p>地域の子ども達との交流、季節ごとのイベントを<br />
+			通してアクティブな暮らしを提供しております。</p>
 			</a>
 			</div>
 		</div>
 		<div class="feature3">
 			<div class="gaiyou">
 			<a href="">
-			<i class="fa fa-database"></i>
-			<h1>データの分析・解析</h1>
-			<p>目的に応じてわかりやすい視覚化し、<br />
-			活用できるようにします。</p>
+			<i class="fa fa-car"></i>
+			<h1>市街地での暮らし</h1>
+			<p>お店や駅、市役所が近いため、利用者さまに合った<br />
+			暮らしの提供が可能です。</p>
 			</a>
 			</div>
 		</div>
