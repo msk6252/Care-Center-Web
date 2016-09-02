@@ -1,0 +1,49 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+	<meta charset="utf-8">
+	<title>元気が出るデイサービスセンター</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    	$(function(){
+    		$("#menubtn").click(function){
+    			$("#menu").slideToggle();
+    		});
+    	});
+    </script>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+	<header>
+		<div class="title">
+			<div class="site">
+				<h1><a href=""> 元気が出るデイサービスセンター</a></h1>
+			</div>
+		</div>
+		<div class="box2">
+			<button type="button" id="menubtn">
+			<i class="fa fa-bars"></i><span>MENU</span>	
+			</button>
+			<nav class="menu" id="menu">
+			<ul>
+			<li><a href="">概要</a></li>
+			<li><a href="">沿革</a></li>
+			<li><a href="">お問い合わせ</a></li>
+			</ul>
+			</nav>	
+		</div>
+	</header>
+		
+	<footer>
+		<p>Copyright &copy;元気がでるデイサービスセンター</p>
+	</footer>
+</body>
+</html>
