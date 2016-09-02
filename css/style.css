@@ -85,6 +85,54 @@ section:after {
 	vertical-align: bottom;
 }
 
+/* ===== 特徴一覧 ===== */
+
+.feature {
+	padding-top: 20px;
+}
+
+.gaiyou a {
+	display: block;
+	background-color: #222222;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+}
+
+.gaiyou a:hover {
+	opacity: 0.8;
+}
+
+.gaiyou i {
+	display: block;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-size: 3.8rem;
+}
+
+.gaiyou .fa-database {
+	background-color: #bfbd13;
+}
+
+
+.gaiyou h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 2.0rem;
+	font-weight: normal;
+}
+
+.gaiyou p {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #524e3c;
+	font-size: 1.4rem;
+}
+
 /* ===== お知らせ ===== */
 .news {
 	padding: 20px;
@@ -183,10 +231,27 @@ header,footer,.news {
 }
 
 @media screen and (min-width: 1281px){
-	.news{
+	.feature,.news{
 		width:1231px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.feature1 {
+		float: left;
+		width: 32%;
+		margin-right: 2%;
+	}
+
+	.feature2 {
+		float: left;
+		width: 32%;
+		margin-right: 2%;
+	}
+
+	.feature3 {
+		float: left;
+		width: 32%;
 	}
 
 }
