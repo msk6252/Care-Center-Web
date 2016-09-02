@@ -29,6 +29,11 @@ header:after {
 	clear: both;
 }
 
+header {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
 section:after {
 	content: "";
 	display: block;
@@ -42,7 +47,7 @@ section:after {
 
 .site h1 {
 	margin: 0;
-	font-size: 3.0rem;
+	font-size: 2.0rem;
 }
 
 .menu ul {
@@ -75,12 +80,19 @@ section:after {
 }
 
 .topimg {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	vertical-align: bottom;
 }
 
 /* ===== お知らせ ===== */
+.news {
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 5px #dddddd;
+}
+
 
 .news h1 {
 	margin-top:0;
@@ -135,19 +147,28 @@ header,footer,.news {
 	padding-right: 15px;
 }
 
-header {
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
+
 
 .news {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-/* ===== 768px以上 ===== */
 
-@media (min-width: 768px) {
+
+/* ===== タブレット向けのスタイル =====*/
+@media screen and (min-width: 600px){
+	
+	.site h1 a {
+		font-size: 2.5rem;
+	}
+
+}
+
+
+/* ===== PC（小）向けのスタイル ===== */
+
+@media screen and (min-width: 960px) {
 
 .title {
 	float: left;
@@ -158,5 +179,14 @@ header {
 	float: right;
 	width: auto;
 }
+
+}
+
+@media screen and (min-width: 1281px){
+	.news{
+		width:1231px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 }
