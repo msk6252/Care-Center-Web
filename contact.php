@@ -8,9 +8,7 @@ if(!empty($_POST['mail'])){
     $subject=$_POST['sub'];
     $message=$_POST['main'];
     $name=$_POST['name'];
-    $gender=$_POST['gender'];
-    $blood=$_POST['blood'];
-    $yubin=$_POST['yubin'];
+    $tel=$_POST['tel'];
  
  
 // 本文
