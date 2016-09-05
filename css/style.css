@@ -11,6 +11,7 @@
 /* ========== スマートフォン ========== */
 html {
 	font-size: 62.5%; /* 10px */
+
 }
 
 br {
@@ -21,6 +22,7 @@ body {
 	font-style: normal; 
 	font-family: 'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
 	font-size: 1.4rem;
+	height:100%;
 }
 
 header:after {
@@ -128,7 +130,8 @@ section:after {
 
 .feature {
 	padding-top: 20px;
-
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .gaiyou a {
@@ -189,6 +192,8 @@ section:after {
 	padding: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
 	border: solid 5px #dddddd;
 }
 

@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang=ja>
 <head>
@@ -11,7 +7,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
     	$(function(){
-    		$("#menubtn").click(function){
+    		$("#menubtn").click(function(){
     			$("#menu").slideToggle();
     		});
     	});
@@ -19,13 +15,13 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" />
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/contact.css" />
 </head>
 <body>
 	<header>
 		<div class="title">
 			<div class="site">
-				<h1><a href=""> 元気が出るデイサービスセンター</a></h1>
+				<h1><a href="./index.html"> 元気が出るデイサービスセンター</a></h1>
 			</div>
 		</div>
 		<div class="box2">
@@ -41,9 +37,51 @@
 			</nav>	
 		</div>
 	</header>
+	
+	<section class="page-title">
+		<h2>お問い合わせ</h2>
+	</section>
+	<form class="form" method="post" action="./contact.php">
+		<div class="fo-style">
+			<span class="budge">必須</span>
+			<p>お名前</p>
+			<input class="fo-name" type="text" name="name" size="50" maxlength="20" placeholder="お名前" required="" />
+		</div>
 		
+		<div class="fo-style">
+			<span class="budge">必須</span>
+			<p>メールアドレス</p>
+			<input class="fo-mail" type="text" name="mail" size="50" maxlength="256" placeholder="メールアドレス"  required="" />
+		</div>
+
+		<div class="fo-style">
+			<span class="budge">必須</span>
+			<p>電話番号</p>
+			<input class="fo-tel" type="text" name="tel" size="50" maxlength="11" placeholder="電話番号" required="" />
+		</div>
+
+		<div class="fo-style">
+			<span class="budge">必須</span>
+			<p>件名</p>
+			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" required="" />
+		</div>
+
+		<div class="fo-style">
+			<span class="budge">必須</span>
+			<p>お問い合わせ内容</p>
+			<textarea  class="fo-main" rows="5" cols="50" name="main" placeholder="ここに記入してください" required=""></textarea>
+		</div>
+
+		<div class="fo-button fo-style">
+			<button class="button" type="submit">送信</button>
+		</div>
+	</form>
+
 	<footer>
-		<p>Copyright &copy;元気がでるデイサービスセンター</p>
+		<div class="footer">
+			<p>Copyright &copy;元気がでるデイサービスセンター</p>
+			<span><a href="tel:0197252940"><i class="fa fa-phone"></i>：0197-25-2940</span>
+		</div>
 	</footer>
 </body>
 </html>

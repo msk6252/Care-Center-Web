@@ -21,6 +21,7 @@ body {
 	font-style: normal; 
 	font-family: 'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
 	font-size: 1.4rem;
+	height: auto;
 }
 
 header:after {
@@ -32,6 +33,7 @@ header:after {
 header {
 	padding-top: 20px;
 	padding-bottom: 10px;
+	border-bottom:solid 2px #dddddd;
 }
 
 section:after {
@@ -119,6 +121,71 @@ section:after {
 	width: auto;
 }
 
+h2 {
+	font-size: 2.0rem;
+	text-align: center;
+}
+
+.budge {
+	background-color: red;
+	color: #fff;
+	padding: 2px;
+	-webkit-border-radius:10%;
+	-moz-border-radius:10%;
+}
+
+.form *{
+	margin: 0 auto;
+}
+
+.form p {
+	font-size: 1.6rem;
+}
+
+input,textarea {
+	width: 100%;
+}
+
+.fo-style {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.fo-name,.fo-mail,.fo-tel,.fo-sub,.fo-main {
+	border:0;
+	padding:10px;
+	font-size:1.2em;
+	font-family:Arial, sans-serif;
+	color:#aaa;
+	border:solid 1px #ccc;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius: 3px;
+}
+
+.fo-button {
+	text-align: center;
+}
+
+.button {
+	padding: 10px 50px;
+	font-size: 1.4rem;
+	border:0;
+	border:solid 1px #ccc;
+	color: #aaa;
+	background-color: #fff;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius: 3px;
+	font-family:Arial, sans-serif;
+}
+
+.button:hover {
+	background-color: #ccc;
+	opacity: 0.8;
+}
+
 
 footer:after {
 	content: "";
@@ -136,29 +203,40 @@ footer p {
 	font-size: 1.4rem;
 }
 
+footer span a {
+	font-size: 2.0rem !important; 
+	color: #fff;
+	text-decoration: none;
+}
+
 header,footer,.news {
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
-
-
-.news {
-	padding-top: 20px;
-	padding-bottom: 20px;
+footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
+.footer {
+	margin-right: 20px;
+	margin-left: 20px;
+}
 
 
 /* ===== タブレット向けのスタイル =====*/
 @media screen and (min-width: 600px){
 	
-
-
 	.site h1 a {
 		font-size: 2.5rem;
 	}
 
+	.fo-style {
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	}
 }
 
 
@@ -211,6 +289,12 @@ header,footer,.news {
 .box2 {
 	float: right;
 	width: auto;
+}
+
+.fo-style {
+	width: calc(100% / 3);
+	margin: 0 auto;
+	margin-bottom: 15px;
 }
 
 }
