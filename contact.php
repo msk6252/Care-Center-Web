@@ -22,6 +22,7 @@ $message_mail = "
 		-------------------------------------
 		お名前：$name
 		メールアドレス：$to
+		電話番号：$tel
 		内容：
 		$message
 		-------------------------------------
@@ -30,7 +31,7 @@ $message_mail = "
 		今しばらくお待ちいだきますよう、よろしくお願い致します。";
 
 
-$headers = 'From: 元気が出るデイサービスセンター' . "\r\n" .
+$headers = 'From: peppermintice6252@gmail.com' . "\r\n" .
 	'Reply-To: genkiup_care@gmail.com' . "\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 
