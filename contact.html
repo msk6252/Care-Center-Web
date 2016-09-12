@@ -52,7 +52,6 @@ if(!filter_var($mail,FILTER_VALIDATE_EMAIL)) {
 }
 
 //エラーがない場合の処理
-//DB登録->メール処理->slackポスト
 
 if (empty($error)) {
 	//メール送信処理
@@ -160,6 +159,7 @@ function getToken() {
 		<h2>お問い合わせ</h2>
 	</section>
 	<form class="form" method="post" action="">
+	<input type="hidden" name="token" value="<?php echo getToken(); ?>"/>
 		<div class="fo-style">
 			<span class="budge">必須</span>
 			<p>お名前</p>

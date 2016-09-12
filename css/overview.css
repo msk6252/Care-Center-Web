@@ -89,7 +89,7 @@ section:after {
 
 .site h1 {
 	margin: 0;
-	font-size: 1.5rem;
+	font-size: 2.0rem;
 }
 
 .menu ul {
@@ -191,7 +191,7 @@ section:after {
 .news {
 	padding: 20px;
 	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	margin-right: 10px;
 	margin-left: 10px;
 	border: solid 5px #dddddd;
@@ -230,27 +230,7 @@ section:after {
 	font-weight: bold; 
 }
 
-/* ===== footer ===== */
-
 footer:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.footer-left:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.footer-right:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.footer-wrap:after {
 	content: "";
 	display: block;
 	clear: both;
@@ -260,41 +240,18 @@ footer {
 	background-color: #383838;
 }
 
-footer *  {
+footer p {
 	margin: 0;
 	color: #ffffff;
 	font-size: 1.4rem;
 }
 
-.footer-right {
-	display: none;
-}
-
-.footer-right h4 {
-	font-size: 2.0rem;
-}
-
-.footer-left p a {
-	text-align: left;
-	text-decoration: none;
-}
-
-.footer-left {
-	width: 100%;
-}
-
-.footer-left * {
-	text-align: center;
+header,footer,.news {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 
-/* ========== */
-header,.news {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
 
 .news {
 	padding-top: 20px;
@@ -306,8 +263,10 @@ header,.news {
 /* ===== タブレット向けのスタイル =====*/
 @media screen and (min-width: 600px){
 	
+
+
 	.site h1 a {
-		font-size: 2.0rem;
+		font-size: 2.5rem;
 	}
 
 }
@@ -362,55 +321,6 @@ header,.news {
 .box2 {
 	float: right;
 	width: auto;
-}
-
-.footer-wrap {
-	padding: 10px 100px;
-}
-
-.footer-left {
-	display: inline;
-	width: 50%;	
-	float: left;
-}	
-
-.footer-left p {
- 	text-align: left;
-}
-
-.footer-right {
-	width: 50%;
-	float: left;
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.footer-left ul {
-	margin: 50%;
-}
-
-.footer-left h4 {
-	font-size: 1.8rem;
-	text-align: left;
-}
-
-.footer-right p {
-	padding-top: 15px;
-	text-align: center;
-}
-
-.footer-right ul li {
-	float: left;
-	width: 32%;
-	margin-right: 2%;
-}
-
-.footer-right ul li:last-child {
-	margin-right: 0;
-}
-
-.footer-right ul li a {
-	text-decoration: none;
 }
 
 }
