@@ -76,7 +76,7 @@ $name 様
 $message
 -------------------------------------
 
-元気が出るデイサービスセンター、後ほど連絡いたしますので、
+元気が出るデイサービスセンターより、後ほど連絡いたしますので、
 今しばらくお待ちいだきますよう、よろしくお願い致します。
 
 ━━━━━━━━━━━━━━
@@ -86,7 +86,7 @@ Tel : 0197-25-2940
 Web : mskserver.html.xdomain.jp
 ━━━━━━━━━━━━━━";
 
-	$headers = 'From: GenkiDeruDay' . "\r\n" .
+	$headers = 'From: GenkiDeruDayCareCenter' . "\r\n" .
 	'Reply-To: peppermintice6252@gmail.com' . "\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 
@@ -101,7 +101,7 @@ Web : mskserver.html.xdomain.jp
 	$message ="";
 	$email="";
 	$name="";
-	}
+	} 
 
 	}
  }
@@ -172,35 +172,37 @@ function getToken() {
 			<h3 style="color:#388E3C;"><?php if($flg) echo "送信完了しました！" ?></h3>
 			<span class="budge">必須</span>
 			<p>お名前</p>
-			<input class="fo-name" type="text" name="name" size="50" maxlength="20" placeholder="お名前" />
+			<input class="fo-name" type="text" name="name" size="50" maxlength="20" placeholder="お名前" value="<?php if (isset($name)) echo h($name); ?>">/>
 		</div>
 		
 		<div class="fo-style">
 			<p style="color:tomato;"><?php if (isset($error['mail'])) echo h($error['mail']); ?></p>
 			<span class="budge">必須</span>
 			<p>メールアドレス</p>
-			<input class="fo-mail" type="text" name="mail" size="50" maxlength="256" placeholder="メールアドレス" />
+			<input class="fo-mail" type="text" name="mail" size="50" maxlength="256" placeholder="メールアドレス" value="<?php if (isset($email)) echo h($email); ?>">" />
 		</div>
 
 		<div class="fo-style">
 			<p style="color:tomato;"><?php if (isset($error['tel'])) echo h($error['tel']); ?></p>
 			<span class="budge">必須</span>
 			<p>電話番号</p>
-			<input class="fo-tel" type="text" name="tel" size="50" maxlength="11" placeholder="電話番号" />
+			<input class="fo-tel" type="text" name="tel" size="50" maxlength="11" placeholder="電話番号" value="<?php if (isset($tel)) echo h($tel); ?>">/>
 		</div>
 
 		<div class="fo-style">
 			<p style="color:tomato;"><?php if (isset($error['subject'])) echo h($error['subject']); ?></p>
 			<span class="budge">必須</span>
 			<p>件名</p>
-			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" />
+			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" value="<?php if (isset($subject)) echo h($subject); ?>">/>
 		</div>
 
 		<div class="fo-style">
 			<p style="color:tomato;"><?php if (isset($error['message'])) echo h($error['message']); ?></p>
 			<span class="budge">必須</span>
 			<p>お問い合わせ内容</p>
-			<textarea  class="fo-main" rows="5" cols="50" name="message" placeholder="ここに記入してください" ></textarea>
+			<textarea  class="fo-main" rows="5" cols="50" name="message" placeholder="ここに記入してください" >
+				<?php if(isset($message)) echo h($message); ?>
+			</textarea>
 		</div>
 
 		<div class="fo-button fo-style">

@@ -162,6 +162,14 @@ input,textarea {
 	margin-bottom: 15px;
 }
 
+.fo-style p ,.fo-style: h3 {
+	text-align: center;
+}
+
+.fot-style h3 {
+	font-size: 1.5rem;
+}
+
 .fo-name,.fo-mail,.fo-tel,.fo-sub,.fo-main {
 	border:0;
 	padding:10px;
