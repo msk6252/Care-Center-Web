@@ -11,7 +11,8 @@
 /* ========== スマートフォン ========== */
 html {
 	font-size: 62.5%; /* 10px */
-
+	min-height: 100%;
+	position: relative;
 }
 
 br {
@@ -40,6 +41,10 @@ section:after {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+header {
+	border-bottom: solid 1px #ccc;
 }
 
 
@@ -89,7 +94,7 @@ section:after {
 
 .site h1 {
 	margin: 0;
-	font-size: 2.0rem;
+	font-size: 1.5rem;
 }
 
 .menu ul {
@@ -119,116 +124,67 @@ section:after {
 .menu li {
 	width: auto;
 }
-
-.topimg {
+.pg-title {
+	background-color: #383838;
 	width: 100%;
-	height: auto;
-	vertical-align: bottom;
-}
-
-/* ===== 特徴一覧 ===== */
-
-.feature {
 	padding-top: 20px;
-	margin-left: 15px;
-	margin-right: 15px;
+	padding-bottom: 20px;
 }
 
-.gaiyou a {
-	display: block;
-	background-color: #222222;
-	color: #ffffff;
+.pg-title h2 {
+	color: #fff;
+	font-size: 2.4rem;
 	text-align: center;
-	text-decoration: none;
 }
 
-.gaiyou a:hover {
-	opacity: 0.8;
-}
-
-.gaiyou i {
+.overview:after {
+	content: "";
 	display: block;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	font-size: 3.8rem;
+	clear: both;
 }
 
-.gaiyou .fa-heart-o {
-	background-color: #ea6747;
+.overview {
+	margin-top: 80px;
+	margin-bottom: 50px;
 }
 
-.gaiyou .fa-child {
-	background-color: #fbf39e;
+table {
+	border-collapse: collapse;
+	width:100%;
 }
-
-.gaiyou .fa-car {
-	background-color: #87acbf;
+th.t_top {
+    border-top: #be1309 4px solid;
 }
-
-.gaiyou h1 {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 2.0rem;
-	font-weight: normal;
-}
-
-.gaiyou p {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #524e3c;
-	font-size: 1.4rem;
-}
-
-.feature1,.feature2,.feature3 {
-	padding-bottom: 10px;
-}
-
-/* ===== お知らせ ===== */
-.news {
+th {
+	border-bottom: #e3e3e3 1px dotted;
+	background-color: #efefef;
+	text-align: left;
 	padding: 20px;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	margin-right: 10px;
-	margin-left: 10px;
-	border: solid 5px #dddddd;
+	font-weight: normal;
+	width: 30%;
+}
+td.t_top {
+	border-top: #b3b3b3 4px solid;
+}
+td {
+	border-bottom: #e3e3e3 1px dotted;
+	text-align: left;
+	padding: 20px;
+}
+tr:hover {
+    background: #3D80DF;
+    color: #FFFFFF;
 }
 
-
-.news h1 {
-	margin-top:0;
-	margin-bottom: 5px;
-	font-size: 1.8rem;
-	color: #666666; 
-}
-
-.news ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.news li a {
+td a {
 	display: block;
-	padding: 5px;
-	color: #000000;
-	border-bottom: dotted 2px #dddddd;
-	font-size: 1.4rem;
+	width: 100%;
+	height: 100%;
 	text-decoration: none;
+	color: #000;
 }
 
-.news li a:hover {
-	background-color: #eeeeee;
-}
-
-.news time {
-	margin-right:1.0rem;
-	color: #888888;
-	font-weight: bold; 
-}
+/* ===== footer ===== */
 
 footer:after {
 	content: "";
@@ -236,17 +192,58 @@ footer:after {
 	clear: both;
 }
 
-footer {
-	background-color: #383838;
+.footer-left:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
-footer p {
+.footer-right:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.footer-wrap:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer {
+	background-color: #383838;
+	width: 100%;
+}
+
+footer *  {
 	margin: 0;
 	color: #ffffff;
 	font-size: 1.4rem;
 }
 
-header,footer,.news {
+.footer-right {
+	display: none;
+}
+
+.footer-right h4 {
+	font-size: 2.0rem;
+}
+
+.footer-left p a {
+	text-align: left;
+	text-decoration: none;
+}
+
+.footer-left {
+	padding: 10px 0;
+	width: 100%;
+}
+
+.footer-left * {
+	text-align: center;
+}
+
+header,.news {
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -321,6 +318,55 @@ header,footer,.news {
 .box2 {
 	float: right;
 	width: auto;
+}
+
+.footer-wrap {
+	padding: 10px 100px;
+}
+
+.footer-left {
+	display: inline;
+	width: 50%;	
+	float: left;
+}	
+
+.footer-left p {
+ 	text-align: left;
+}
+
+.footer-right {
+	width: 50%;
+	float: left;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.footer-left ul {
+	margin: 50%;
+}
+
+.footer-left h4 {
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+.footer-right p {
+	padding-top: 15px;
+	text-align: center;
+}
+
+.footer-right ul li {
+	float: left;
+	width: 32%;
+	margin-right: 2%;
+}
+
+.footer-right ul li:last-child {
+	margin-right: 0;
+}
+
+.footer-right ul li a {
+	text-decoration: none;
 }
 
 }
