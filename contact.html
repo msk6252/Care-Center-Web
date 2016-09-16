@@ -71,7 +71,7 @@ $name 様
 お問い合わせ頂きました内容は以下のとおりです。
 -------------------------------------
 お名前：$name
-メールアドレス：$email
+メールアドレス：$mail
 件名：$sub
 内容：
 $message
@@ -100,7 +100,7 @@ Web : mskserver.html.xdomain.jp
   	if($flg) {
 	//送信完了後、値をクリア
 	$message ="";
-	$email="";
+	$mail="";
 	$name="";
 	$tel="";
 	$sub="";
@@ -196,7 +196,7 @@ function getToken() {
 			<p style="color:tomato;"><?php if (isset($error['subject'])) echo h($error['subject']); ?></p>
 			<span class="budge">必須</span>
 			<p>件名</p>
-			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" value="<?php if (isset($sub)) echo h($sub); ?>">
+			<input class="fo-sub" type="text" name="sub" size="50" maxlength="120" placeholder="件名" value="<?php if (isset($sub)) echo h($sub); ?>" /> 
 		</div>
 
 		<div class="fo-style">
