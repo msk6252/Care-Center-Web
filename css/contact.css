@@ -140,6 +140,7 @@ h2 {
 	background-color: red;
 	color: #fff;
 	padding: 2px;
+	margin-bottom: 5px
 	-webkit-border-radius:10%;
 	-moz-border-radius:10%;
 }
@@ -164,6 +165,7 @@ input,textarea {
 
 .error p ,.fo-style h3 {
 	text-align: center;
+	font-weight: bold;
 }
 
 .fo-style h3 {
