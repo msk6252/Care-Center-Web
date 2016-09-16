@@ -196,16 +196,14 @@ function getToken() {
 			<p style="color:tomato;"><?php if (isset($error['subject'])) echo h($error['subject']); ?></p>
 			<span class="budge">必須</span>
 			<p>件名</p>
-			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" value="<?php if (isset($sub)) echo h($sub); ?>">/>
+			<input class="fo-sub" type="text" name="subject" size="50" maxlength="120" placeholder="件名" value="<?php if (isset($sub)) echo h($sub); ?>">
 		</div>
 
 		<div class="fo-style">
 			<p style="color:tomato;"><?php if (isset($error['message'])) echo h($error['message']); ?></p>
 			<span class="budge">必須</span>
 			<p>お問い合わせ内容</p>
-			<textarea  class="fo-main" rows="5" cols="50" name="message" placeholder="ここに記入してください" >
-				<?php if(isset($message)) echo h($message); ?>
-			</textarea>
+			<textarea  class="fo-main" rows="5" cols="50" name="message" placeholder="ここに記入してください" ><?php if(isset($message)) echo h($message); ?></textarea>
 		</div>
 
 		<div class="fo-button fo-style">
