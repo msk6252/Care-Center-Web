@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+//PHPMailerの呼び出し
+require_once('php/PHPMailerAutoload.php');
+
 
 //トークンの発行
 if($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -55,14 +58,11 @@ if(!filter_var($mail,FILTER_VALIDATE_EMAIL)) {
 
 if (empty($error)) {
 	//メール送信処理
-
+	$flg = TRUE;
 	$to = $mail;
 
-	// 件名
 	$subject = "お問い合わせ頂きありがとうございます | 元気が出るデイサービスセンター";
-
-	// 本文
-	$message_mail = "
+	$body = "
 $name 様
 
 元気が出るデイサービスセンターです。
@@ -84,18 +84,37 @@ $message
 株式会社エイチエムサポート
 元気が出るデイサービスセンター	
 Tel : 0197-25-2940
-Web : mskserver.html.xdomain.jp
+Web : mskserverdti.dip.jp
 ━━━━━━━━━━━━━━";
 
-	$headers = 'From: GenkiDeruDayCareCenter' . "\r\n" .
-	'Reply-To: peppermintice6252@gmail.com' . "\r\n" .
-	'X-Mailer: PHP/' . phpversion();
+
+	$fromname = "元気が出るデイサービスセンター";
+	$from = "peppermintice6252@gmail.com";
+	$smtp_user = "peppermintice6252@gmail.com";
+	$smtp_password = "kadowaki0502";
+
+
+	//PHPMailerオブジェクトの生成
+	$mail = new PHPMailer();
+	$mail->IsSMTP();
+	$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+	$mail->SMTPAuth = true;
+	$mail->CharSet = 'utf-8';
+	$mail->SMTPSecure = 'tls';
+	$mail->Host = "smtp.gmail.com";
+	$mail->Port = 587;
+	$mail->IsHTML(false);
+	$mail->Username = $smtp_user;
+	$mail->Password = $smtp_password; 
+	$mail->SetFrom($smtp_user);
+	$mail->From     = $fromaddress;
+	$mail->Subject = $subject;
+	$mail->Body = $body;
+	$mail->AddAddress($to);
 
 	mb_language('Japanese');
 	mb_internal_encoding('UTF-8');
-
   	$flg = mb_send_mail($to,$subject,$message_mail,$headers);
-
 
   	if($flg) {
 	//送信完了後、値をクリア
@@ -172,7 +191,10 @@ function getToken() {
 	<form class="form" method="post" action="">
 		<input type="hidden" name="token" value="<?php echo getToken(); ?>"/>
 		<div class="fo-style">
-			<h3 style="color:#388E3C;" class="error"><?php if($flg) echo "送信完了しました！" ?></h3>
+			<h3 style="color:#388E3C;" class="error"><?php if( !$mail -> Send() ){
+    echo "送信失敗しました。<br/ >Mailer Error:".$mailer->ErrorInfo; } else { echo "送信完了しました！"; }
+
+echo $message; ?></h3>
 			<span class="budge">必須</span>
 			<p>お名前</p>
 			<input class="fo-name" type="text" name="name" size="50" maxlength="20" placeholder="お名前" value="<?php if (isset($name)) echo h($name); ?>" />
