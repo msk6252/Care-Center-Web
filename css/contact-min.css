@@ -1,0 +1,328 @@
+@charset utf-8;
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@media screen and min-width 1281px {
+.feature,.news {
+width:1231px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.feature3 {
+float:left;
+width:32%;
+}
+
+.feature1,.feature2 {
+float:left;
+width:32%;
+margin-right:2%;
+}
+}
+
+@media screen and min-width 600px {
+.site h1 a {
+font-size:2rem;
+}
+
+.fo-style {
+width:60%;
+margin:0 auto 15px;
+}
+}
+
+@media screen and min-width 960px {
+#menubtn {
+display:none;
+}
+
+#menu {
+display:block !important;
+}
+
+.menu ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menu li a {
+display:block;
+color:#000;
+font-size:1.4rem;
+text-decoration:none;
+padding:10px 15px;
+}
+
+.menu li a:hover {
+background-color:#eee;
+}
+
+.menu ul:after {
+content:"";
+display:block;
+clear:both;
+}
+
+.box2 {
+float:right;
+width:auto;
+}
+
+.fo-style {
+width:calc(100% / 3);
+margin:0 auto 15px;
+}
+
+.footer-wrap {
+padding:10px 100px;
+}
+
+.footer-left {
+display:inline;
+width:50%;
+float:left;
+}
+
+.footer-left p {
+text-align:left;
+}
+
+.footer-right {
+width:50%;
+float:left;
+display:table-cell;
+vertical-align:middle;
+}
+
+.footer-left ul {
+margin:50%;
+}
+
+.footer-left h4 {
+font-size:1.8rem;
+text-align:left;
+}
+
+.footer-right p {
+padding-top:15px;
+text-align:center;
+}
+
+.footer-right ul li {
+float:left;
+width:32%;
+margin-right:2%;
+}
+
+.footer-right ul li:last-child {
+margin-right:0;
+}
+
+.footer-right ul li a {
+text-decoration:none;
+}
+
+.footer-right ul {
+list-style:none;
+}
+
+.menu li,.title {
+float:left;
+width:auto;
+}
+}
+
+html {
+font-size:62.5%;
+}
+
+body {
+font-style:normal;
+font-family:'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
+font-size:1.4rem;
+height:auto;
+}
+
+header {
+border-bottom:solid 2px #ddd;
+padding:30px 20px;
+}
+
+.page-title {
+padding-top:20px;
+padding-bottom:20px;
+margin-bottom:20px;
+background-color:#383838;
+}
+
+.page-title h2 {
+color:#fff;
+}
+
+#menubtn {
+border:solid 1px #aaa;
+border-radius:5px;
+background-color:#fff;
+position:absolute;
+top:20px;
+right:15px;
+cursor:pointer;
+padding:6px 12px;
+}
+
+#menubtn:hover {
+background-color:#ddd;
+}
+
+#menubtn:focus {
+outline:none;
+}
+
+#menubtn i {
+color:#888;
+font-size:1.8rem;
+}
+
+#menubtn span {
+display:inline-block;
+text-indent:-9999px;
+}
+
+.menu ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.site h1 a {
+color:#000;
+text-decoration:none;
+}
+
+.site h1 {
+font-size:1.5rem;
+margin:0;
+}
+
+.menu li a {
+display:block;
+color:#000;
+font-size:1.6rem;
+text-decoration:none;
+padding:10px 15px;
+}
+
+.menu li a:hover {
+background-color:#eee;
+}
+
+.menu li {
+width:auto;
+}
+
+h2 {
+font-size:2rem;
+text-align:center;
+}
+
+.budge {
+background-color:red;
+color:#fff;
+margin-bottom:5px 0;
+-moz-border-radius:10%;
+padding:2px;
+}
+
+.form * {
+margin:0 auto;
+}
+
+.form p {
+font-size:1.6rem;
+}
+
+input,textarea {
+width:100%;
+}
+
+.fo-style {
+width:80%;
+margin:0 auto 15px;
+}
+
+.error p,.fo-style h3 {
+text-align:center;
+font-weight:700;
+}
+
+.fo-style h3 {
+font-size:1.5rem;
+}
+
+.fo-name,.fo-mail,.fo-tel,.fo-sub,.fo-main {
+font-size:1.2em;
+font-family:Arial, sans-serif;
+color:#aaa;
+border:solid 1px #ccc;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+padding:10px;
+}
+
+.button {
+font-size:1.4rem;
+border:solid 1px #ccc;
+color:#aaa;
+background-color:#fff;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+font-family:Arial, sans-serif;
+margin-bottom:20px;
+padding:10px 50px;
+}
+
+.button:hover {
+background-color:#ccc;
+opacity:0.8px;
+}
+
+footer {
+background-color:#383838;
+}
+
+footer * {
+color:#fff;
+font-size:1.4rem;
+margin:0;
+}
+
+.footer-right h4 {
+font-size:2rem;
+}
+
+.footer-left p a {
+text-align:left;
+text-decoration:none;
+}
+
+.footer-left {
+width:100%;
+padding:10px 0;
+}
+
+header:after,.page-title:after,.menu ul:after,footer:after,.footer-left:after,.footer-right:after,.footer-wrap:after {
+content:"";
+display:block;
+clear:both;
+}
+
+.menu,.footer-right {
+display:none;
+}
+
+.fo-button,.footer-left * {
+text-align:center;
+}
