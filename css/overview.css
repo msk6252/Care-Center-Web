@@ -243,18 +243,12 @@ footer *  {
 	text-align: center;
 }
 
-header,.news {
-	padding-left: 15px;
-	padding-right: 15px;
+header {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
-
-
-
-.news {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
 
 
 /* ===== タブレット向けのスタイル =====*/
@@ -263,7 +257,7 @@ header,.news {
 
 
 	.site h1 a {
-		font-size: 2.5rem;
+		font-size: 2.0rem;
 	}
 
 }
