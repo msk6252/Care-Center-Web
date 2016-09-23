@@ -146,6 +146,14 @@ function getToken() {
 	<title>元気が出るデイサービスセンター</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!--[if lt IE 9] -->
+		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.js"></script>
+	<!-- [endif] -->
+
+	<!--[if gte IE 9] -->
+		<script src="//code.jquery.com/jquery-2.1.4.js"></script>
+	<!--[endif]-->
     <script>
     	$(function(){
     		$("#menubtn").click(function(){
