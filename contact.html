@@ -3,6 +3,7 @@ session_start();
 
 //PHPMailerの呼び出し
 require_once('./php/PHPMailerAutoload.php');
+require_once('/usr/local/apache2/conf/account.php');
 $mailer = new PHPMailer();
 $send_result = false;
 
@@ -88,8 +89,8 @@ Web : mskserverdti.dip.jp
 
 	$fromname = "元気が出るデイサービスセンター";
 	$from = "peppermintice6252@gmail.com";
-	$smtp_user = "peppermintice6252@gmail.com";
-	$smtp_password = "kadowaki0502";
+	$smtp_user = $account['user'];
+	$smtp_password = $account['password'];
 
 	mb_language('Japanese');
 	mb_internal_encoding('UTF-8');
