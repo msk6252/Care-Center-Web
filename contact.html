@@ -91,6 +91,7 @@ Web : mskserverdti.dip.jp
 	$from = "peppermintice6252@gmail.com";
 	$smtp_user = $account['user'];
 	$smtp_password = $account['password'];
+	$bcc = "peppermintice6252@gmail.com";
 
 	mb_language('Japanese');
 	mb_internal_encoding('UTF-8');
@@ -111,6 +112,8 @@ Web : mskserverdti.dip.jp
 	$mailer->Subject = $subject;
 	$mailer->Body = $body;
 	$mailer->AddAddress($to);
+	$mailer->addBcc(bcc);
+
 
 	
 	$send_result = $mailer->Send();
